@@ -14,7 +14,7 @@ export default function ContactList() {
 
   useEffect(() => {
     if (!contacts.length) dispatch(resetState());
-  }, []);
+  }, [dispatch]);
 
   const visibleContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filterValue.toLowerCase())
